@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="/" class="navbar-brand">JDstore</a>
@@ -12,7 +12,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "#" do %>
+          <%= link_to carts_path do %>
             购物车 <i class="fa fa-shopping-cart"></i> ( <%= current_cart.products.count %> )
           <% end %>
         </li>
