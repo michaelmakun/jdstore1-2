@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+  <thead>
+    <th>#</th>
+    <th>商品</th>
+    <th>发布时间</th>
+    <th>管理选项</th>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= link_to(product.title, admin_product_path(product)) %></td>
+        <td><%= product.created_at %></td>
+        <td>
+          <%= link_to("编缉", edit_admin_product_path(product), class: :"btn btn-success btn-xs") %>
+          <%= link_to("删除", admin_product_path(product), method: :delete, class: :"btn btn-danger btn-xs" ) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
