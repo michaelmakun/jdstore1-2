@@ -39,6 +39,7 @@ gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'figaro'
 gem 'fog'
+gem 'rack-mini-profiler'
 
 group :production do
   gem 'pg'
