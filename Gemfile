@@ -40,6 +40,7 @@ gem 'aasm'
 gem 'figaro'
 gem 'fog'
 gem 'rack-mini-profiler'
+gem 'bullet',group: 'development'
 
 group :production do
   gem 'pg'
