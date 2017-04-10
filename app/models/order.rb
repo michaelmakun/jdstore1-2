@@ -1,9 +1,4 @@
 class Order < ApplicationRecord
-  before_create :generate_token
-
-  def generate_token
-    self.token = SecureRandom.uuid
-  end
 
   belongs_to :user
   has_many :product_lists
@@ -21,6 +16,7 @@ class Order < ApplicationRecord
     self.update_columns(is_paid: true)
   end
 
+  include Tokenable
   include AASM
 
   aasm do
